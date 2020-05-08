@@ -36,7 +36,7 @@ extension UIView {
                                    newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC) }
   }
 
-  public func recycleForCollectionKitReuse() {
+  @objc open func recycleForCollectionKitReuse() {
     if let reuseManager = reuseManager {
       reuseManager.queue(view: self)
     } else {
